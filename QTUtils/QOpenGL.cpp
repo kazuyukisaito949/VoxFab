@@ -42,10 +42,14 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 #include "../Voxelyze/Utils/GL_Utils.h"
 
-#if defined(_WIN32) || defined(_WIN64) //to get fmax, fmin to work on Windows/Visual Studio
-#define fmax max
-#define fmin min
-#endif
+#include<algorithm>
+
+//#if defined(_WIN32) || defined(_WIN64) //to get fmax, fmin to work on Windows/Visual Studio
+//#define fmax max
+//#define fmin min
+//#endif
+
+#pragma comment(lib,"glu32.lib")
 
 int CQOpenGL::TotalID = 0;
 

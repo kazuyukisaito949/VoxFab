@@ -130,9 +130,6 @@
     <ClCompile Include="..\Voxelyze\VXS_Voxel.cpp">
       <Filter>Source Files\Voxelyze</Filter>
     </ClCompile>
-    <ClCompile Include="GeneratedFiles\qrc_VoxFab.cpp">
-      <Filter>Generated Files</Filter>
-    </ClCompile>
     <ClCompile Include="GeneratedFiles\Release\moc_Dlg_3DBrush.cpp">
       <Filter>Generated Files\Release</Filter>
     </ClCompile>
@@ -336,6 +333,9 @@
     </ClCompile>
     <ClCompile Include="GeneratedFiles\Template\moc_Dlg_MeshInfo.cpp">
       <Filter>Generated Files\Template</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\qrc_VoxCad.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

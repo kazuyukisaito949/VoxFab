@@ -11,6 +11,8 @@ See <http://www.opensource.org/licenses/lgpl-3.0.html> for license details.
 #include "VXS_SimGLView.h"
 #include "Utils/GL_Utils.h"
 
+#pragma comment(lib,"opengl32.lib")
+
 CVXS_SimGLView::CVXS_SimGLView(CVX_Sim* pSimIn)
 {
 	pSim = pSimIn;

@@ -414,6 +414,7 @@ void Dlg_Palette::UpdateFields(void) //updates window based on current material 
         ui.IsoNameEdit->setText(QString::fromStdString(GetPCurMatFAV()->GetIsoName()));
         ui.ManufacturerEdit->setText(QString::fromStdString(GetPCurMatFAV()->GetManufacturer()));
 
+		//--> saito Temporal Disable
         //Geometry Tab
         ui.GeometryTab->setEnabled(false);
         ui.ScaleX->setText(QString::fromStdString(""));
@@ -421,6 +422,7 @@ void Dlg_Palette::UpdateFields(void) //updates window based on current material 
         ui.ScaleZ->setText(QString::fromStdString(""));
         ui.GeoShapeComb->setCurrentIndex(NULL);
         ui.LoadMeshButton->setEnabled(false);
+		//<-- saito
 
 		//Model Tab
 		ui.ModelTab->setEnabled(false);
@@ -467,12 +469,14 @@ void Dlg_Palette::UpdateFields(void) //updates window based on current material 
 //        ui.MatPropCombo->setCurrentIndex(GetPCurGeo()->GetShapeId());
 
         //Geometry Tab
-        ui.GeometryTab->setEnabled(true);
-        ui.ScaleX->setText(QString::number(GetPCurGeo()->GetScaleX()));
-        ui.ScaleY->setText(QString::number(GetPCurGeo()->GetScaleY()));
-        ui.ScaleZ->setText(QString::number(GetPCurGeo()->GetScaleZ()));
-        ui.GeoShapeComb->setCurrentIndex(GetPCurGeo()->GetShapeId());
-        ui.LoadMeshButton->setEnabled(false);
+		//Temporary disable //saito -->
+        //ui.GeometryTab->setEnabled(true);
+        //ui.ScaleX->setText(QString::number(GetPCurGeo()->GetScaleX()));
+        //ui.ScaleY->setText(QString::number(GetPCurGeo()->GetScaleY()));
+        //ui.ScaleZ->setText(QString::number(GetPCurGeo()->GetScaleZ()));
+        //ui.GeoShapeComb->setCurrentIndex(GetPCurGeo()->GetShapeId());
+        //ui.LoadMeshButton->setEnabled(false);
+		//<--
 
 		switch (GetPCurMat()->GetMatType()){
 		case SINGLE:

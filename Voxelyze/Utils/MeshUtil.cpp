@@ -1,5 +1,8 @@
 
 #include <assert.h>
+#define _USE_MATH_DEFINES
+#include<math.h>
+
 #include "MeshUtil.h"
 
 #if defined(_WIN32) || defined(_WIN64) //to get fmax, fmin to work on Windows/Visual Studio

@@ -13,7 +13,8 @@
 #include "../QTUtils/QThreadWrap.h"
 #include <qsettings.h>
 //for multithreading
-#include <QtConcurrentMap>
+//#include <QtConcurrentMap>
+#include<QtConcurrent\qtconcurrentmap.h>
 
 class QVX_Object : public QWidget, public CVX_Object
 {

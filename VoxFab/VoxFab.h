@@ -1,7 +1,8 @@
 #ifndef VOXCAD_H
 #define VOXCAD_H
 
-#include <QtGui/QMainWindow>
+//#include <QtGui/QMainWindow>
+#include<QtWidgets\qmainwindow.h>
 #include "ui_VoxFab.h"
 #include "QVX_Edit.h"
 #include "QVX_Interfaces.h"
@@ -35,7 +36,7 @@ class VoxFab : public QMainWindow
 	Q_OBJECT
 
 public:
-    VoxFab(QWidget *parent = 0, Qt::WFlags flags = 0);
+    VoxFab(QWidget *parent = 0, Qt::WindowFlags flags = 0);
     ~VoxFab();
 
 	enum AppViewMode {VM_3DVIEW, VM_EDITLAYER, VM_EDITBCS, VM_FEA, VM_PHYSICS, VM_TENSILE, VM_3DBRUSH, VM_NONE};

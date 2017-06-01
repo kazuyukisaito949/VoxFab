@@ -27,7 +27,8 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 *******************************************************************************/
 
 #include "VoxFab.h"
-#include <QtGui/QApplication>
+//#include <QtGui/QApplication>
+#include<QtWidgets\qapplication.h>
 
 int main(int argc, char *argv[])
 {

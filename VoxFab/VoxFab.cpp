@@ -36,7 +36,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 //#include "Dlg_EditPrim.h"
 #include "Dlg_Tensile.h"  
 
-VoxFab::VoxFab(QWidget *parent, Qt::WFlags flags)
+VoxFab::VoxFab(QWidget *parent, Qt::WindowFlags flags)
 : QMainWindow(parent, flags) //, MainSim(&MainEnv, &MainMesh)
 {
     QCoreApplication::setOrganizationName("Keio University");
