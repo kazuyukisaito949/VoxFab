@@ -228,6 +228,7 @@ void Dlg_Physics::UpdateUI(void)
 	ui.TempPerEdit->setText(QString::number(ptEnv->GetTempPeriod(), 'g', 3));
 
 	ui.UseGravCheck->setChecked(pSim->IsFeatureEnabled(VXSFEAT_GRAVITY)); //ptEnv->IsGravityEnabled());
+	//ui.GravSlider->setRange(-10000000, 10000000);
 	ui.GravSlider->setRange(0, 10000);
 	ui.GravSlider->setValue(qRound(-ptEnv->GetGravityAccel()/0.00981)); //1e-5 takes care for float -> int rounding...
 	ui.GravEdit->setText(QString::number(ptEnv->GetGravityAccel(), 'g', 3));

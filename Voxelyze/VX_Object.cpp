@@ -2555,10 +2555,20 @@ bool CVXC_Structure::ReadFAV(CXML_Rip* pXML, std::string Version, std::string* R
                     //different compression types
                     if (compression == "none") {
 
-                        DataIn.resize(RawData.size()/2); // 1 voxel has 2 bytes.
+                        //DataIn.resize(RawData.size()/2); // 1 voxel has 2 bytes. //remove saito 2017/06/06
 
                         int cur = 0;
-                        if(bit_per_voxel == 8){
+						if (bit_per_voxel == 4) { //add saito 2017/06/06
+	                        DataIn.resize(RawData.size()); 
+                            for (int i=0; i<(int)RawData.size(); i++){
+                               int dec;
+								char hex = RawData[i];
+                                sscanf(&hex, "%x", &dec);
+                                DataIn[cur] = dec; //if compressed using this scheme
+                                cur++;
+                            }
+						}else if(bit_per_voxel == 8){
+							DataIn.resize(RawData.size()/2); // 1 voxel has 2 bytes. //add saito 2017/06/06
                             for (int i=0; i<(int)RawData.size(); i=i+2){
                                 int dec;
                                 char hex[2] = {RawData[i], RawData[i+1]};
